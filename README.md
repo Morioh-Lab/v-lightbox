@@ -1,5 +1,7 @@
 # Lightbox Photo Grid and Slideshow component for Vue.JS
 
+v-lightbox is a Vue component which allows to display first x (1-5) images of your gallery in a grid view as you seen on Facebook timeline. Click on the thumbnail will display all images in a fullscreen, navigatable modal popup just like the gallery lightbox.
+
 ![Lightbox Photo Grid and Slideshow component for Vue.Js](https://i.imgur.com/HdsKXTr.png)
 
 ![Lightbox Photo Grid and Slideshow component for Vue.Js](https://i.imgur.com/OPE3Ndr.png)
