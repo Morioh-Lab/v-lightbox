@@ -170,6 +170,7 @@ module.exports = {
             'https://cdn.morioh.net/fa/v5.13.0/css/fontawesome.min.css',
             'https://cdn.morioh.net/fa/v5.13.0/css/regular.min.css',
             'https://cdn.morioh.net/fa/v5.13.0/css/brands.min.css',
+            'https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css',
             // 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css',
 
           ],

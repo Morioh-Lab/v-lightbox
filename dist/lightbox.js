@@ -150,6 +150,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     items: {
@@ -259,151 +260,176 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.items.length > 0
-    ? _c("div", { staticClass: "lb" }, [
-        _c(
-          "div",
-          {
-            staticClass: "lb-grid",
-            class: [
-              _vm.css,
-              _vm.items.length > _vm.cells
-                ? "lb-grid-" + _vm.cells
-                : "lb-grid-" + _vm.items.length
-            ]
-          },
-          _vm._l(_vm.items, function(src, i) {
-            return i < _vm.cells
-              ? _c(
-                  "div",
-                  {
-                    staticClass: "lb-item",
-                    style: _vm.bg(src),
-                    on: {
-                      click: function($event) {
-                        return _vm.show(i)
+    ? _c(
+        "div",
+        { staticClass: "lb" },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "lb-grid",
+              class: [
+                _vm.css,
+                _vm.items.length > _vm.cells
+                  ? "lb-grid-" + _vm.cells
+                  : "lb-grid-" + _vm.items.length
+              ]
+            },
+            _vm._l(_vm.items, function(src, i) {
+              return i < _vm.cells
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "lb-item",
+                      style: _vm.bg(src),
+                      on: {
+                        click: function($event) {
+                          return _vm.show(i)
+                        }
                       }
-                    }
-                  },
-                  [
-                    i == _vm.cells - 1 && _vm.items.length - _vm.cells > 0
-                      ? _c("span", { staticClass: "lb-more" }, [
-                          _vm._v(_vm._s(_vm.items.length - _vm.cells) + "+")
-                        ])
-                      : _vm._e()
-                  ]
-                )
-              : _vm._e()
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _vm.index >= 0
-          ? _c("div", { staticClass: "lb-modal" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-outline-danger btn-sm lb-modal-close",
-                  on: { click: _vm.close }
-                },
-                [_c("i", { staticClass: "fas far fa-times" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-outline-primary lb-modal-prev",
-                  on: { click: _vm.prev }
-                },
-                [_c("i", { staticClass: "fas far fa-angle-left fa-2x" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-outline-primary lb-modal-next",
-                  on: { click: _vm.next }
-                },
-                [_c("i", { staticClass: "fas far fa-angle-right fa-2x" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "lb-modal-img", on: { click: _vm.close } },
-                [
-                  _c("img", { attrs: { src: _vm.src } }),
-                  _vm._v(" "),
-                  _vm.loading
-                    ? _c("div", { staticClass: "spinner spinner-dots-wave" }, [
-                        _vm._m(0),
+                    },
+                    [
+                      i == _vm.cells - 1 && _vm.items.length - _vm.cells > 0
+                        ? _c("span", { staticClass: "lb-more" }, [
+                            _vm._v(_vm._s(_vm.items.length - _vm.cells) + "+")
+                          ])
+                        : _vm._e()
+                    ]
+                  )
+                : _vm._e()
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c(
+            "transition",
+            {
+              attrs: {
+                "enter-active-class": "animated fadeIn",
+                "leave-active-class": "animated fadeOut"
+              }
+            },
+            [
+              _vm.index >= 0
+                ? _c("div", { staticClass: "lb-modal" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-outline-danger btn-sm lb-modal-close",
+                        on: { click: _vm.close }
+                      },
+                      [_c("i", { staticClass: "fas far fa-times" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-outline-primary lb-modal-prev",
+                        on: { click: _vm.prev }
+                      },
+                      [_c("i", { staticClass: "fas far fa-angle-left fa-2x" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-outline-primary lb-modal-next",
+                        on: { click: _vm.next }
+                      },
+                      [_c("i", { staticClass: "fas far fa-angle-right fa-2x" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "lb-modal-img", on: { click: _vm.close } },
+                      [
+                        _c("img", { attrs: { src: _vm.src } }),
                         _vm._v(" "),
-                        _vm._m(1),
-                        _vm._v(" "),
-                        _vm._m(2),
-                        _vm._v(" "),
-                        _vm._m(3),
-                        _vm._v(" "),
-                        _vm._m(4)
-                      ])
-                    : _vm._e()
-                ]
-              )
-            ])
-          : _vm._e()
-      ])
+                        _vm.loading
+                          ? _c(
+                              "div",
+                              { staticClass: "spinner spinner-dots-wave" },
+                              [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "badge badge-primary rounded-circle w-10 h-10"
+                                  },
+                                  [
+                                    _c("i", { staticClass: "sr-only" }, [
+                                      _vm._v(" ")
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "badge badge-primary rounded-circle w-10 h-10"
+                                  },
+                                  [
+                                    _c("i", { staticClass: "sr-only" }, [
+                                      _vm._v(" ")
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "badge badge-primary rounded-circle w-10 h-10"
+                                  },
+                                  [
+                                    _c("i", { staticClass: "sr-only" }, [
+                                      _vm._v(" ")
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "badge badge-primary rounded-circle w-10 h-10"
+                                  },
+                                  [
+                                    _c("i", { staticClass: "sr-only" }, [
+                                      _vm._v(" ")
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "badge badge-primary rounded-circle w-10 h-10"
+                                  },
+                                  [
+                                    _c("i", { staticClass: "sr-only" }, [
+                                      _vm._v(" ")
+                                    ])
+                                  ]
+                                )
+                              ]
+                            )
+                          : _vm._e()
+                      ]
+                    )
+                  ])
+                : _vm._e()
+            ]
+          )
+        ],
+        1
+      )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticClass: "badge badge-primary rounded-circle w-10 h-10" },
-      [_c("i", { staticClass: "sr-only" }, [_vm._v(" ")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticClass: "badge badge-primary rounded-circle w-10 h-10" },
-      [_c("i", { staticClass: "sr-only" }, [_vm._v(" ")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticClass: "badge badge-primary rounded-circle w-10 h-10" },
-      [_c("i", { staticClass: "sr-only" }, [_vm._v(" ")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticClass: "badge badge-primary rounded-circle w-10 h-10" },
-      [_c("i", { staticClass: "sr-only" }, [_vm._v(" ")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "span",
-      { staticClass: "badge badge-primary rounded-circle w-10 h-10" },
-      [_c("i", { staticClass: "sr-only" }, [_vm._v(" ")])]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

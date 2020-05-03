@@ -1,7 +1,7 @@
 {
   "name": "@morioh/v-lightbox",
   "description": "Lightbox Photo Grid and Slideshow component for Vue.Js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Morioh-Lab",
   "main": "./dist/lightbox.min.js",
   "scripts": {
