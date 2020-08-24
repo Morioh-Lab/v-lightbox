@@ -50,7 +50,7 @@
 
         props: {
             items: {
-                type: String,
+                type: Array,
                 default: () => { return [] }
             },
 
