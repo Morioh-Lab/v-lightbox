@@ -1,9 +1,9 @@
 <template>
     <div class="lb" v-if="items.length>0">
         <div class="lb-grid" :class="[css,items.length>cells?'lb-grid-' + cells: 'lb-grid-' + items.length]">
-            <div class="lb-item" v-for="(src, i) in items" @click="show(i)" v-if="i<cells" :style="bg(src)">
+            <a class="lb-item" v-for="(src, i) in items" :href="items[i]" role="link" @click.prevent="show(i)" v-if="i<cells" :style="bg(src)">
                 <span class="lb-more" v-if="i==cells-1 && items.length - cells>0">{{ items.length - cells}}+</span>
-            </div>
+            </a>
         </div>
 
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
